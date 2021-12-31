@@ -1,0 +1,13 @@
+
+
+# laptop screen scale
+output 'Unknown 0xA08B 0x00000000' scale 1.25
+
+
+# Set wallpaper
+# Random
+# pacman -S wallutils
+# /usr/share/backgrounds/sway/selected
+output * bg `lswallpaper | grep "/selected/" | sort -R | head -1` fill
+# Choose specific one
+# output * bg /usr/share/backgrounds/other/endless.jpg fill

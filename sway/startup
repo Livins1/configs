@@ -1,0 +1,24 @@
+set $neovim $term --title "Neovim" --command nvim
+
+exec fcitx5 -r -d
+exec firefox
+# exec $neovim
+exec swaymsg "workspace $workspace_terminals; exec $term"
+exec thunderbird
+exec kotatogram-desktop 
+
+
+# Notifications
+exec mako
+ 
+assign [window_role="^browser$"] → workspace $workspace_www
+assign [app_id="thunderbird"]     → workspace $workspace_mail
+# assign [title="^Neovim$"]        → workspace $workspace_editor
+assign [app_id="appimagekit_d2192f48ebc43a9db26e1dfa2bc5097b-Kotatogram_Desktop"] → workspace $workspace_telegram
+
+### Change window settings
+for_window [window_role="browser"] layout tabbed
+
+### Set focus
+exec sleep 1s && swaymsg 'workspace $workspace_www'
+exec sleep 1s && swaymsg '[title="Firefox"] focus'

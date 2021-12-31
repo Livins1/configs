@@ -1,0 +1,13 @@
+
+set $term foot
+set $menu wofi --show=drun --prompt="Enter the application name" | swaymsg exec --
+
+# Preferred screen locker
+set $lock swaylock -e -f -i ~/Pictures/idle.jpg
+
+
+set $workspace_www 1:WWW
+set $workspace_terminals 2:Terminals
+set $workspace_telegram 3:Telegram
+set $workspace_mail 4:Mail
+

@@ -1,0 +1,262 @@
+[colors]
+background = #222
+background-alt = #444
+foreground = #dfdfdf
+foreground-alt = #888
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+notify = #EBCB8B
+success = #A3BE8C
+warning = #D08770
+urgent = #BF616A
+nord6 = #ECEFF4
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+
+[bar/main]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 2.7%
+radius = 6.0
+fixed-center = false
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-size = 0
+line-size = 2
+padding = 1
+module-margin = 1
+dpi = 192
+
+
+font-0 = "Noto Sans Mono:size=11;1"
+font-1 = "Noto Sans Mono:size=11;1"
+font-2 = "Noto Sans Symbols:size=11;1"
+font-3 = "Noto Sans Symbols2:size=11;1"
+font-4 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+font-5 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+font-6 = "Font Awesome 5 Brands:pixelsize=12;2"
+
+
+modules-left = date bspwm xwindow
+modules-center =
+modules-right =  network-short cpu memory battery
+
+tray-position = right
+tray-padding = 2
+tray-maxsize = 48
+
+wm-restack = bspwm
+
+[global/wm]
+margin-top = 0
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-9 = X;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-background = #006064 
+label-focused-foreground = #84FFFF 
+label-focused-underline= #ddd
+label-focused-padding = 4
+
+label-occupied = %icon%
+label-occupied-foreground = #006064 
+label-occupied-padding = 4
+
+label-urgent = %icon%
+label-urgent-foreground = #9b0a20
+label-urgent-padding = 4
+
+label-empty = %icon%
+label-empty-foreground = #555555
+label-empty-padding = 4
+
+[module/bspwm_jonhoo]
+type = internal/bspwm
+pin-workspaces = false
+enable-click = false
+enable-scroll = false
+
+label-focused = " %name% "
+label-focused-underline = #fba922
+
+label-occupied = " %name% "
+label-occupied-foreground = #ffaa00
+
+label-urgent = " %name% "
+label-urgent-underline = #9b0a20
+
+label-empty = " %name% "
+label-empty-foreground = #555555
+
+
+
+[module/network-short]
+type = internal/network
+interface = wlan0
+
+interval = 1
+
+format-connected = %{A1:networkmanager_dmenu:}<ramp-signal>%{A}
+format-disconnected = %{A1:networkmanager_dmenu:}<label-disconnected>%{A}
+
+label-disconnected = 
+label-disconnected-foreground = ${colors.urgent}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+
+ramp-signal-0-foreground = ${colors.urgent}
+ramp-signal-0-underline = ${colors.urgent}
+
+ramp-signal-1-foreground = ${colors.notify}
+ramp-signal-1-underline = ${colors.notify}
+
+ramp-signal-2-foreground = ${colors.nord7}
+ramp-signal-2-underline = ${colors.nord7}
+
+ramp-signal-3-foreground = ${colors.success}
+ramp-signal-3-underline = ${colors.success}
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format = <ramp-load> <label>
+
+ramp-load-0 = 
+ramp-load-0-foreground = ${colors.success}
+ramp-load-0-underline = ${colors.success}
+
+ramp-load-1 = 
+ramp-load-1-foreground = ${colors.warning}
+ramp-load-1-underline = ${colors.warning}
+
+ramp-load-2 = 
+ramp-load-2-foreground = ${colors.urgent}
+
+ramp-load-2-underline = ${colors.urgent}
+[module/memory]
+type = internal/memory
+interval = 3
+
+format = <ramp-used> <label>
+
+label = %gb_used%/%gb_total%
+
+ramp-used-0 = 
+ramp-used-0-foreground = ${colors.success}
+ramp-used-0-underline = ${colors.success}
+
+ramp-used-1 = 
+ramp-used-1-foreground = ${colors.warning}
+ramp-used-1-underline = ${colors.warning}
+
+ramp-used-2 = 
+ramp-used-2-foreground = ${colors.urgent}
+ramp-used-2-underline = ${colors.urgent}
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 5.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = %essid%
+
+label-disconnected =
+
+ramp-signal-0 = 🌧
+ramp-signal-1 = 🌦
+ramp-signal-2 = 🌥
+ramp-signal-3 = 🌤
+ramp-signal-4 = 🌣
+
+
+[module/battery]
+type = internal/battery
+
+full-at = 95
+
+battery = BAT0
+adapter = AC
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.foreground}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.notify}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.notify}
+
+label-full = 
+label-full-foreground = ${colors.success}
+label-full-underline = ${colors.success}
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%a %d"
+date-alt = %a %b %d
+
+time = %I:%M
+time-alt = %I:%M%p
+
+format-prefix =
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+
+label = %date% %time%
+
+[module/github]
+type = internal/github
+token = ${file:/home/jon/.config/github/notifications.token}
+user = jonhoo
+empty-notifications = false
+;label = %{u#ff9900 +u} %notifications% %{u-}
+label = %{u#0099ff +u} 📫 %{u-}
+interval = 10
+
+[settings]
+screenchange-reload = true
+
+; vim:ft=dosini
