@@ -39,12 +39,12 @@
 
 /* Reset all styles */
 * {
-    border: 1px;
+    border: none;
     border-color: #0D1117;
     border-radius: 0;
     min-height: 0;
-    /* margin: 1px; */
-    padding: 1px 0px 1px 0px;
+    margin-top: 3px;
+    padding: 0.5px 0px 0.5px 0px;
 }
 
 /* The whole bar */
@@ -52,7 +52,7 @@
     background-color: #191C21;
     color: #F2F8FE; /* Sway palette: focused/text */
     font-family: Hack, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 /* -----------------------------------------------------------------------------
