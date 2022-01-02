@@ -46,11 +46,11 @@ local on_attach = function(client, bufnr)
 
 	-- Get signatures (and _only_ signatures) when in argument lists.
 	--[[ require "lsp_signature".on_attach({
-    doc_lines = 0,
-    handler_opts = {
-      border = "none"
-    },
-  }) ]]
+doc_lines = 0,
+handler_opts = {
+border = "none"
+},
+}) ]]
 end
 
 lspconfig.rust_analyzer.setup({
@@ -134,13 +134,21 @@ lspconfig.tsserver.setup({
 		},
 	},
 })
--- Css
-lspconfig.cssls.setup{
-	on_attach = on_attach,
-    capabilities = create_capabilities(),
-    filetypes = { "css", "scss", "less" }
 
-}
+-- Css
+lspconfig.cssls.setup({
+	on_attach = on_attach,
+	capabilities = create_capabilities(),
+	filetypes = { "css", "scss", "less" },
+	--[[ commands = {
+		Format = {
+			function()
+				return {
+				}
+			end,
+		},
+	}, ]]
+})
 
 -- Lua
 lspconfig.sumneko_lua.setup({
@@ -166,9 +174,9 @@ lspconfig.sumneko_lua.setup({
 				globals = { "vim" },
 			},
 			--[[ workspace = {
-				-- Make the server aware of Neovim runtime files
-				library = vim.api.nvim_get_runtime_file("", true),
-			}, ]]
+-- Make the server aware of Neovim runtime files
+library = vim.api.nvim_get_runtime_file("", true),
+}, ]]
 			-- Do not send telemetry data containing a randomized but unique identifier
 			telemetry = {
 				enable = false,

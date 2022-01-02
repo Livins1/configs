@@ -16,8 +16,8 @@ require("nvim-treesitter.configs").setup({
 		disable = { "yaml", "python" },
 	},
 	autotag = {
-		enable = false,
-		filetypes = { "html", "xml", "vue" },
+		enable = true,
+		filetypes = { "html", "xml", "vue", "javascript" , "javascriptreact", "jsx"},
 	},
 	autopairs = {
 		enable = false,
