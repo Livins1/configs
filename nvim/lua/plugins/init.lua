@@ -77,7 +77,7 @@ return require("packer").startup(function(use)
 	-- One key comment
 	use("b3nj5m1n/kommentary")
 	--  Symbolsd outline
-	use("simrat39/symbols-outline.nvim")
+	-- use("simrat39/symbols-outline.nvim")
 	--  Diagnostics
 	use("folke/lsp-colors.nvim")
 	use("folke/lsp-trouble.nvim")

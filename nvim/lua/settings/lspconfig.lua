@@ -41,8 +41,8 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 	-- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-	buf_set_keymap("n", "<A-F>", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-	buf_set_keymap("i", "<A-F>", "<cmd>lua vim.lsp.buf.formatting()<CR><Esc>", opts)
+	buf_set_keymap("n", "<A-f>", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	buf_set_keymap("i", "<A-f>", "<cmd>lua vim.lsp.buf.formatting()<CR><Esc>", opts)
 
 	-- Get signatures (and _only_ signatures) when in argument lists.
 	--[[ require "lsp_signature".on_attach({
