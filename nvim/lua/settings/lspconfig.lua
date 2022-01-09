@@ -63,6 +63,8 @@ lspconfig.rust_analyzer.setup({
 		["rust-analyzer"] = {
 			cargo = {
 				allFeatures = true,
+                loadOutDirsFromCheck = true,
+                runBuildScripts = true,
 			},
 			completion = {
 				postfix = {

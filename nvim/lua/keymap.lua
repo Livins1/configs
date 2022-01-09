@@ -62,8 +62,8 @@ set_keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.treesitter{}<c
 -- Trouble
 set_keymap("n", "<leader>t", "<cmd>TroubleToggle<cr>", { noremap = true })
 -- Copy
-set_keymap("n", "<C-c>", '"+y<cr>', { noremap = true })
-set_keymap("v", "<C-c>", '"+y<cr>', { noremap = true })
+set_keymap("n", "<C-c>", ':"+y<cr>', { noremap = true })
+set_keymap("v", "<C-c>", ':"+y<cr>', { noremap = true })
 
 -- Comments
 vim.api.nvim_set_keymap("n", "<leader>.", "<Plug>kommentary_line_default", {})

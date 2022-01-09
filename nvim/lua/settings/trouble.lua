@@ -12,8 +12,8 @@ require('trouble').setup{
         close_folds = {"zM", "zm"}, -- close all folds
         open_folds = {"zR", "zr"}, -- open all folds
         toggle_fold = {"zA", "za"}, -- toggle fold of current file
-        previous = "l", -- up
-        next = "k" -- down
+        previous = "k", -- up
+        next = "j" -- down
     },
     indent_lines = true, -- add an indent guide below the fold icons
     auto_open = false, -- automatically open the list when you have diagnostics
