@@ -63,8 +63,8 @@ lspconfig.rust_analyzer.setup({
 		["rust-analyzer"] = {
 			cargo = {
 				allFeatures = true,
-                loadOutDirsFromCheck = true,
-                runBuildScripts = true,
+				loadOutDirsFromCheck = true,
+				runBuildScripts = true,
 			},
 			completion = {
 				postfix = {
@@ -131,7 +131,7 @@ lspconfig.tsserver.setup({
 	init_options = {
 		javascript = {
 			format = {
-				baseIndentSize = 4,
+				baseIndentSize = 2,
 			},
 		},
 	},
