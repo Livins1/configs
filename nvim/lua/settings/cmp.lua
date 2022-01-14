@@ -29,23 +29,11 @@ local function shift_tab(fallback)
 end
 
 cmp.setup({
-	-- completion = { completeopt = "menu,menuone,noinsert" },
 	snippet = {
-		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
 			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-			--[[ require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-			require('snippy').expand_snippet(args.body) -- For `snippy` users.
-			vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users. ]]
 		end,
 	},
-	--[[ snippet = {
-		expand = function(args)
-			expand = function(args)
-				require("luasnip").lsp_expand(args.body)
-			end
-		end,
-	}, ]]
 	mapping = {
 		["<c-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 		["<c-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -54,7 +42,6 @@ cmp.setup({
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		-- { name = "luasnip" },
         { name = 'vsnip' },
 		{ name = "buffer" },
 		{ name = "path" },

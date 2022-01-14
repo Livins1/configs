@@ -18,3 +18,5 @@ require("settings.autopairs")
 --[[ require('nvim-ts-autotag').setup({
     filetypes = {'xml', 'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'}
 }) ]]
+
+
