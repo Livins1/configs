@@ -2,7 +2,12 @@
 
 # laptop screen scale
 output 'Unknown 0xA08B 0x00000000' scale 1.25
+output 'Dell Inc. DELL U2719DC 14HSTS2' scale 1.25 res 2560x1440
 
+# auto switch monitor wen laptop lid closed
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
 
 # Set wallpaper
 # Random

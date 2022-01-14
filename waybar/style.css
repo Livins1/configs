@@ -39,12 +39,13 @@
 
 /* Reset all styles */
 * {
+    /* border-top: 1px; */
     border: none;
     border-color: #0D1117;
     border-radius: 0;
     min-height: 0;
-    margin-top: 3px;
-    padding: 0.5px 0px 0.5px 0px;
+    /* margin-top: 0.575px; */
+    /* padding: px 0px 0.25px 0px; */
 }
 
 /* The whole bar */
@@ -52,7 +53,7 @@
     background-color: #191C21;
     color: #F2F8FE; /* Sway palette: focused/text */
     font-family: Hack, sans-serif;
-    font-size: 16px;
+    font-size: 16.5px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -188,10 +189,11 @@
 
 #workspaces button {
     border-top: 2px solid transparent;
+    /* border-color: rgba; */
     /* To compensate for the top border and still have vertical centering */
     padding-bottom: 2px;
-    padding-left: 15px;
-    padding-right: 18px;
+    padding-left: 10px;
+    padding-right: 13px;
     color: #7dcfff; /* Sway palette: unfocused/text */
 }
 
@@ -203,17 +205,16 @@
 }
 
 #workspaces button.visible {
-    border-color: #333333; /* Sway palette focused_inactive/border */
+    border-color: #2f343a; /* Sway palette focused_inactive/border */
     color: #7dcfff; /* Sway palette: focused_inactive/text */
-    background-color: #9ece6a; /* Sway palette focused_inactive/background */
+    background-color: #1a1b26; /* Sway palette focused_inactive/background */
 }
 
 #workspaces button.focused {
-    border-color: #4c7899; /* Sway palette: focused/border */
+    border-color: yellow; /* Sway palette: focused/border */
     color: #f7768e; /* Sway palette: focused/text */
     background-color: #414868; /* Sway palette: focused/background */
 }
-
 #workspaces button.urgent {
     border-color: #2f343a; /* Sway palette: urgent/border */
     color: #7aa2f7; /* Sway palette: urgent/text */

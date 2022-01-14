@@ -11,6 +11,9 @@ exec kotatogram-desktop
 # Notifications
 exec mako
  
+
+
+
 assign [window_role="^browser$"] → workspace $workspace_www
 assign [app_id="thunderbird"]     → workspace $workspace_mail
 # assign [title="^Neovim$"]        → workspace $workspace_editor

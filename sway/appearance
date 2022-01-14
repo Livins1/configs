@@ -1,4 +1,5 @@
 
+default_border none
 
 font pango:system-ui 14px
 

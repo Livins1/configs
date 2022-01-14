@@ -1,3 +1,10 @@
 
 exec swayidle -w timeout 3000 'swaylock -e -f -i ~/Pictures/idle.jpg' timeout 6000 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -e -f -i ~/Pictures/idle.jpg'
 
+
+
+# Preferred screen locker
+# set $lock swaylock -e -f -i ~/Pictures/idle.jpg
+# Random Picture
+set $lock swaylock -e -f -i `lswallpaper | grep "/selected/" | sort -R | head -1`
+
