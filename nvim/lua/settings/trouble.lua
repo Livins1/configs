@@ -15,7 +15,7 @@ require('trouble').setup{
         previous = "k", -- up
         next = "j" -- down
     },
-    indent_lines = true, -- add an indent guide below the fold icons
+    indent_lines = false, -- add an indent guide below the fold icons
     auto_open = false, -- automatically open the list when you have diagnostics
     auto_close = false, -- automatically close the list when you have no diagnostics
     auto_preview = true, -- automatically preview the location of the diagnostic. <esc> to close preview and go back

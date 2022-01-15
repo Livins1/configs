@@ -59,9 +59,9 @@ return require("packer").startup(function(use)
 
 	use({ "nvim-lua/lsp-status.nvim" })
 	use({ "windwp/nvim-autopairs" })
-	use({
+	--[[ use({
 		"windwp/nvim-ts-autotag",
-	})
+	}) ]]
 
 	use({
 		"nvim-telescope/telescope.nvim",
