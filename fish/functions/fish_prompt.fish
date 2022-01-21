@@ -13,6 +13,9 @@ function fish_prompt --description 'Write out the prompt'
         set -g __prompt_show_jobs "true"
     end
 
+
+
+
     set -l __delim "$__low_color"">""$__normal_color"
 
     # Just calculate these once, to save a few cycles when displaying the prompt.
@@ -169,13 +172,18 @@ function fish_prompt --description 'Write out the prompt'
         set __delim "$__error_status_color""!""$__normal_color"
     end
 
+    if set -q VIRTUAL_ENV
+        # echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
+        set -l __env_name (basename "$VIRTUAL_ENV")
+        set __virtual_env "(""$__env_name"") "
+    end
     # Print prompt
     if [ $__prompt_extra_small = "true" ]
         echo -n -s "$__delim" " "
     else
         echo -e -n -s "$__low_color" "[" "$__normal_color" "$__user" "$__hostname" ":" "$__directory" "$__low_color" "] " "$__normal_color" "$__git_info" "$__fish_jobs" "$__error_status"
         echo
-        echo -n -s "$__delim" " "
+        echo -n -s "$__virtual_env" "$__delim" " "
     end
 end
 
