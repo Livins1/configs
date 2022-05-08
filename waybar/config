@@ -13,10 +13,10 @@
 
     "layer": "bottom",
 
-    "position": "top",
+    "position": "bottom",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 20,
+    // "height": 10,
 
     "modules-left": [
         "sway/workspaces",
@@ -169,22 +169,8 @@
             "10:Torrent": "", // Icon: cloud-download-alt
             "urgent": "",
             "focused": "",
-            "default": ""
+            "default": "",
         }
-    },
-
-    "temperature": {
-      "critical-threshold": 75,
-      "interval": 3,
-      "format": "{icon} {temperatureC}°C",
-      "format-icons": [
-          "", // Icon: temperature-empty
-          "", // Icon: temperature-quarter
-          "", // Icon: temperature-half
-          "", // Icon: temperature-three-quarters
-          ""  // Icon: temperature-full
-      ],
-      "tooltip": true
     },
 
     "tray": {

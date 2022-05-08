@@ -1,6 +1,6 @@
-bindsym Print            exec swayshot
-bindsym Mod1+Print       exec swayshot window
-bindsym Shift+Print      exec swayshot region
-bindsym Mod4+Print       exec swayshot display upload
-bindsym Mod4+Mod1+Print  exec swayshot window  upload
-bindsym Mod4+Shift+Print exec swayshot region  upload
+bindsym Print            exec ~/.config/sway/bin/swayshot
+bindsym Mod1+Print       exec ~/.config/sway/bin/swayshot window
+bindsym Shift+Print      exec ~/.config/sway/bin/swayshot region
+bindsym Mod4+Print       exec ~/.config/sway/bin/swayshot display upload
+bindsym Mod4+Mod1+Print  exec ~/.config/sway/bin/swayshot window  upload
+bindsym Mod4+Shift+Print exec ~/.config/sway/bin/swayshot region  upload

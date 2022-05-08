@@ -1,5 +1,5 @@
-require("options") 
-require("plugins") 
-require("keymap") 
-require("settings") 
+require("options")
+require("plugins")
+require("keymap")
+require("settings")
 

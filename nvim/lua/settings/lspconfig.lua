@@ -187,6 +187,16 @@ library = vim.api.nvim_get_runtime_file("", true),
 	},
 })
 
+
+-- C/C++
+require'lspconfig'.clangd.setup({
+	on_attach = on_attach,
+	capabilities = create_capabilities(),
+})
+
+
+
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = false,
 	virtual_text = false,

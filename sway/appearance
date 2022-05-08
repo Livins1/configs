@@ -1,6 +1,6 @@
 
-default_border none
+# default_border none
 
-font pango:system-ui 14px
+# font pango:system-ui 17px
 
-gaps inner 0
+# gaps inner 0

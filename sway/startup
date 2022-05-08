@@ -7,6 +7,7 @@ exec swaymsg "workspace $workspace_terminals; exec $term"
 exec thunderbird
 exec kotatogram-desktop 
 
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Notifications
 exec mako
