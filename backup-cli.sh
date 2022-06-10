@@ -36,6 +36,13 @@ else
   echo "Alacritty Not Found"
 fi
 
+if [ -a $HOME/.zshrc ];then
+	mkdir -p ./zsh && cp $HOME/.zshrc $_
+	echo "Zsh Found"
+else
+  echo "Zsh Skipped"
+fi
+
 if [ -d $dst_fish ];then
 	mkdir -p ./fish && cp -r $dst_fish/* $_
 	echo "fish Found"
@@ -54,7 +61,6 @@ fi
 
 if [ -d $dst_starship ];then
 	mkdir -p ./starship && cp -r $dst_starship/starship.toml $_
-
 	echo "StarShip Found"
 else
   echo "starship Not Found"
@@ -79,6 +85,7 @@ if [ -d $dst_mako ];then
 else
   echo "Mako Not Found"
 fi
+
 echo "backUp Finished"
 
 
