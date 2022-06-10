@@ -2,6 +2,20 @@
 # see /usr/share/doc/zsh/examples/zshrc for examples
 # fpath+=($HOME/.zsh/pure)
 
+# Env
+export EDITOR=nvim
+export EMAIL="latemantis@gmail.com"
+export CARGO_INCREMENTAL=1
+export LESS="-F -X -R"
+export BROWSER=firefox
+export RUSTUP_DIST_SERVER="https://mirrors.sjtug.sjtu.edu.cn/rust-static/"
+export GO111MODULE="on"
+export GOPROXY="https://goproxy.cn"
+export FZF_DEFAULT_COMMAND="fd --type file --follow"
+export FZF_CTRL_T_COMMAND="fd --type file --follow"
+export FZF_DEFAULT_OPTS="--height 20%"
+
+
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
