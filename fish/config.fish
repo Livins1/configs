@@ -1,8 +1,12 @@
 
 
-alias  vim="nvim"
 alias  pc="proxychains"
 
+
+abbr -a e nvim
+abbr -a c cargo
+abbr -a zp 'zoxide query'
+abbr -a pacman 'sudo pacman'
 
 
 setenv RUST_LOG 'merino=TRACE'

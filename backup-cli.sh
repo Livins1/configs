@@ -54,6 +54,7 @@ if [ -d $dst_nvim ];then
 	mkdir -p ./nvim && cp -r $dst_nvim/autoload/ $_
 	mkdir -p ./nvim && cp -r $dst_nvim/lua/ $_
 	mkdir -p ./nvim && cp -r $dst_nvim/init.lua $_
+	mkdir -p ./nvim && cp -r $dst_nvim/after $_
 	echo "Neovim Found"
 else
   echo "nvim Not Found"
