@@ -1,4 +1,4 @@
-local execute = vim.api.nvim_command
+
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
@@ -34,14 +34,7 @@ return require("packer").startup(function(use)
         }, ]]
 	})
 
-	--[[ use {'ms-jpq/coq_nvim', branch='coq'}
-    use {'ms-jpq/coq.artifacts', branch='artifacts'} ]]
-	-- use {'ms-jpq/coq.thirdparty', branch='3p'}
 
-	--[[ use({
-		"L3MON4D3/LuaSnip", -- Snippets plugin
-	}) ]]
-	use({ "hrsh7th/vim-vsnip" })
 	-- Cmp
 	use({
 		"hrsh7th/nvim-cmp",
@@ -52,14 +45,11 @@ return require("packer").startup(function(use)
 			"hrsh7th/cmp-vsnip",
 			"hrsh7th/cmp-nvim-lsp", -- Source nvim lsp
 			-- 'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-			-- 'ray-x/lsp_signature.nvim', -- LSP Signature
 		},
 	})
 
-	use({ "ckipp01/stylua-nvim" })
 
-	use({ "nvim-lua/lsp-status.nvim" })
-	use({ "windwp/nvim-autopairs" })
+	-- use({ "windwp/nvim-autopairs" })
 	--[[ use({
 		"windwp/nvim-ts-autotag",
 	}) ]]
@@ -70,7 +60,6 @@ return require("packer").startup(function(use)
 	})
 
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- use 'beauwilliams/statusline.lua'

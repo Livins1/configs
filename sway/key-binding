@@ -23,7 +23,7 @@ bindsym $key_mod+Return exec $term
 bindsym $key_mod+Shift+q kill
 
 # Start your launcher
-bindsym $key_mod+d exec $menu
+bindsym $key_alt+d exec $menu
 
 # Drag floating windows by holding down $key_mod and left mouse button.
 # Resize them with right mouse button + $key_mod.
@@ -67,6 +67,7 @@ bindsym $key_mod+Shift+Right move right
 # Note: workspaces can have any name you want, not just numbers.
 # We just use 1-10 as the default.
 
+
 # Switch to workspace
 bindsym $key_mod+1 workspace $workspace_www
 bindsym $key_mod+2 workspace $workspace_terminals
@@ -75,6 +76,7 @@ bindsym $key_mod+4 workspace $workspace_mail
 bindsym $key_mod+5 workspace number 5
 bindsym $key_mod+6 workspace number 6
 bindsym $key_mod+7 workspace number 7
+
 
 # Move focused container to workspace
 bindsym $key_mod+Shift+1 move container to workspace $workspace_www
@@ -133,16 +135,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $key_left resize shrink width 10px
-    bindsym $key_down resize grow height 10px
-    bindsym $key_up resize shrink height 10px
-    bindsym $key_right resize grow width 10px
+    bindsym $key_left resize shrink width 40px
+    bindsym $key_down resize grow height 40px
+    bindsym $key_up resize shrink height 40px
+    bindsym $key_right resize grow width 40px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 30px
+    bindsym Down resize grow height 30px
+    bindsym Up resize shrink height 30px
+    bindsym Right resize grow width 30px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -170,8 +172,8 @@ bindsym --locked XF86AudioMute exec 'pactl set-sink-mute $audio_sink toggle'
 bindsym --locked XF86AudioRaiseVolume exec '$audio_unmute ; pactl set-sink-volume $audio_sink +2%'
 bindsym --locked XF86AudioLowerVolume exec '$audio_unmute ; pactl set-sink-volume $audio_sink -2%'
 bindsym --locked XF86AudioMicMute exec 'pactl set-source-mute $audio_source toggle'
-bindsym --locked XF86MonBrightnessUp exec 'brightnessctl set +5%'
-bindsym --locked XF86MonBrightnessDown exec 'brightnessctl set 5%-'
+bindsym --locked XF86MonBrightnessUp exec 'brightnessctl set +10%'
+bindsym --locked XF86MonBrightnessDown exec 'brightnessctl set 10%-'
 bindsym --locked XF86Display exec 'swaymsg "output $output_laptop toggle"'
 
 # Change keyboard layout

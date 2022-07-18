@@ -1,6 +1,6 @@
 set $term foot
-set $menu wofi --show=drun --prompt="Enter the application name" | swaymsg exec --
 
+set $menu wofi --show=drun --prompt="Enter the application name" | swaymsg exec --
 
 set $workspace_www 1:WWW
 set $workspace_terminals 2:Terminals

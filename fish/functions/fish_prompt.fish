@@ -16,7 +16,7 @@ function fish_prompt --description 'Write out the prompt'
 
 
 
-    set -l __delim "$__low_color"">""$__normal_color"
+    set -l __delim "$__low_color""ξ""$__normal_color"
 
     # Just calculate these once, to save a few cycles when displaying the prompt.
     if not set -q __colors_defined
@@ -159,7 +159,7 @@ function fish_prompt --description 'Write out the prompt'
                 set __fish_jobs "$__fish_jobs""$__jobs_color_bold""$__jobs_bg""$__jobs_color""&"
             end
             set __fish_jobs "$__fish_jobs""$__normal_color"" "
-            if [ $__delim = "$__low_color"">""$__normal_color" ]
+            if [ $__delim = "$__low_color""ξ""$__normal_color" ]
                 set __delim "$__jobs_color""»""$__normal_color"
             end
         end

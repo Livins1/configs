@@ -3,6 +3,10 @@
 alias  vim="nvim"
 alias  pc="proxychains"
 
+
+
+setenv RUST_LOG 'merino=TRACE'
+
 setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
 setenv FZF_DEFAULT_OPTS '--height 20%'
@@ -135,5 +139,6 @@ end
 
 # zoxide
 zoxide init fish | source
+
 
 

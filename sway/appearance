@@ -1,6 +1,22 @@
 
+ # class                 border  backgr. text    indicator child_border
+client.focused          #c574dd #222436 #a9b8e8 #c574dd   #c574dd
+client.focused_inactive #252734 #252734 #a9b8e8 #252734   #252734
+client.unfocused        #252734 #252734 #888888 #252734   #252734
+client.urgent           #2f343a #900000 #a9b8e8 #900000   #900000
+client.placeholder      #000000 #0c0c0c #a9b8e8 #000000   #0c0c0c
+client.background       #1a1b26
 # default_border none
 
 # font pango:system-ui 17px
 
 # gaps inner 0
+#
+# default_border pixel 10
+# gaps inner 10
+
+gaps inner 5
+gaps outer 3
+
+default_border pixel 3
+default_floating_border pixel 4

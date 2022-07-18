@@ -35,7 +35,7 @@ main()
     $current_dir/weather.sh $fahrenheit $location $fixedlocation > $DATAFILE
     if tmux has-session &> /dev/null
     then
-      sleep 10
+      sleep 180
     else
       break
     fi
